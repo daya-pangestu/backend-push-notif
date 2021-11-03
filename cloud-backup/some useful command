@@ -1,0 +1,5 @@
+export from cloud firestore = firestore-export --accountCredentials serviceAccountFile.json --backupFile firestore-backup.json
+set import to local = export FIRESTORE_EMULATOR_HOST=0.0.0.0:8081
+import backup.json into local = firestore-import --accountCredentials serviceAccountFile.json --backupFile firestore-backup.json
+
+save current local data = firebase emulators:start --import=$HOME/project/Taha-functions/emulators.backup

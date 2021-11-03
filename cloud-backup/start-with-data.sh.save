@@ -1,0 +1,2 @@
+firebase emulators:start --import=$HOME/project/Taha-f
+unctions/cloud-backup/emulators.backup
